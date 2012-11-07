@@ -1,0 +1,16 @@
+Nama project : i-fishing
+
+Tujuan dan manfaat project : 
+1. Membuat sebuah dokumen SKPL dan aplikasi berbasis website terintegrasi untuk komunitas pemancing di kota Surabaya
+
+
+
+Target pengguna project : komunitas pemancing di kota Surabaya
+
+Fitur-fitur yang menjadi kelebihan project
+1. update event (informasi seputar dunia pancing atau pun lomba memancing dan juga informasi wisata pemancingan guna memenuhi kebutuhan komunitas pemancing  di kota Surabaya).
+2. booking (melakukan pendaftaran lomba memancing dan pemesanan tempat memancing yang diinginkan)
+
+Metode pengerjaan : RAD 
+
+Teknologi yang digunakan : PHP5, HTML5, dan framework bootstrap
