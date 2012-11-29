@@ -5,6 +5,7 @@
 ?>
 <body>
 <?php
+
 $inputnamadepan=$_POST['inputNamaDepan'];
 $inputnamabelakang=$_POST['inputNamaBelakang'];
 $inputjeniskelamin=$_POST['inputJenisKelamin'];
