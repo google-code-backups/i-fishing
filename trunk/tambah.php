@@ -1,18 +1,3 @@
-<!--
-
-Tutoralzine Demo 
-Original tutorial: Creating a Facebook-like Registration Form with jQuery
-Tutorial URL: http://tutorialzine.com/2009/08/creating-a-facebook-like-registration-form-with-jquery/
-
-You are free to use the following demo code for any purpose you see fit.
-
--->
-<?php
-	define('INCLUDE_CHECK',1);
-	require "functions.php";
-	
-?>
-
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
@@ -32,7 +17,7 @@ You are free to use the following demo code for any purpose you see fit.
 </div></div>
 <div>
 <div id="div-regForm">
-<form name="form" method="post" enctype="multipart/form-data" action="proses.php">
+<form name="form" method="post" enctype="multipart/form-data" action="prosestips.php">
 <table>
   <tbody>
   <tr>
