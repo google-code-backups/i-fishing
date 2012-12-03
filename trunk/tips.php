@@ -80,7 +80,7 @@ span2
 <br>
 <div>
 					
-		<form method="post" action="tambah.php"><legend>Tips and Trick</legend>
+		<form method="post" action="tambah.html"><legend>Tips and Trick</legend>
 
 			<button class="btn btn-primary" type="submit">Tambah tips n trick</button>
 		</form>
