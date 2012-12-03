@@ -89,27 +89,7 @@ span2
 </div>
 </div>
 </div>
-<div id="GdnFooterCopyRight" class="footer">
-		<div class="wrap">
-			<div class="box-left">
-				<table width="700" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications." >
-					<tr>
-						<td width="700" align="center" valign="top">
-							
-							<a class="verisign" href="javascript:vrsn_splash()" tabindex="-1"></a>
-	                       	<br />
-	                   		<a href="http://www.verisign.com/ssl-certificate/" rel="nofollow" target="_blank"  class="ssl-text">ABOUT SSL CERTIFICATES</a>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class='box-right'>
-				<img src="http://www.blibli.com/wcsstore/Indraprastha/images/gdn/images/footer-logo.jpg" alt="Blibli.com" /><br />
-				Copyright &copy; Blibli.com - Toko Online dengan sensasi belanja online store ala mall | All Rights Reserved<br />
-				Untuk pengalaman browsing terbaik gunakan browser Firefox versi 3.0 atau versi yang lebih baru </div>
-			</div>
-			<div class='clearfix'></div>
-	</div>
+
 </body>
 <script src="js/bootstrap.js">
 
