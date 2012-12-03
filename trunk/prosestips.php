@@ -1,6 +1,5 @@
-
 <?php
-include "config.php";
+include "configtips.php";
 $judul = $_POST['judul'];
 $tanggal = $_POST['tanggal'];
 $waktu = $_POST['waktu'];
