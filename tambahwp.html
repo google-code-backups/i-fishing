@@ -1,0 +1,62 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>add wisata pancing</title>
+
+<link rel="stylesheet" type="text/css" href="demo1.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+
+<div><div class="page-header">
+    <h1>Tambah artikel untk wisata pancing <small>Bagikan informasi mengenani lokasi pemancingan di Surabaya</small></h1>
+</div></div>
+<div>
+<div id="div-regForm">
+<form name="form" method="post" enctype="multipart/form-data" action="proseswp.php">
+<table>
+  <tbody>
+  <tr>
+    <td><label for="nama">Nama tempat:</label></td>
+    <td><div class="input-container"><input name="nama" id="nama" type="text" /></div></td>
+  </tr>
+  <tr>
+    <td><label for="tanggal">Tanggal:</label></td>
+    <td><div class="control-label"><input name="tanggal" id="tanggal" type="date" /></div></td>
+  </tr>
+  <tr>
+    <td><label for="waktu">Waktu:</label></td>
+    <td><div class="control-label"><input name="waktu" id="waktu" type="time" /></div></td>
+  </tr>
+  <tr>
+    <td><label for="isi">Deskripsi:</label></td>
+    <td><TEXTAREA NAME="isi" placeholder="Tuliskan deskripsi tempat..." ROWS=10 COLS=30 >
+</TEXTAREA></td>
+  </tr>
+<tr>
+	<td><label for="picture">Image:</label></td>
+    <td><div class="input-container"><input name="picture" id="picture" type="file" /></div></td>
+</tr>
+  <tr>
+  <td>&nbsp;</td>
+ <td><input type="submit" name="upload" value="Upload" />
+ 	</td>
+  </tr>
+  </tbody>
+</table>
+
+</form>
+
+<div id="error">
+&nbsp;
+</div>
+</div>
+</div>
+
+</body>
+<script src="js/bootstrap.js">
+</html>
