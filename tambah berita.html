@@ -1,0 +1,53 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TambahBerita</title>
+</head>
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<body>
+<form class="form-horizontal" name="formtambah" action="simpanberita.php" method="post" enctype="multipart/form-data">
+<legend><strong>TAMBAH BERITA</strong></legend>
+		<div class="control-group">
+			<label class="control-label" for="inputNamaDepan">Judul</label>
+			<div class="controls">
+			<input name="inputNamaDepan" class="span3" type="text" id="inputJudul">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputDate">Tanggal</label>
+			<div class="controls">
+			<input name="inputTanggal" class="span3" type="date" id="inputTanggal">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTime">Waktu</label>
+			<div class="controls">
+			<input name="inputTanggal" class="span3" type="time" id="inputWaktu">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label"  for="inputIsi">Isi Berita</label>
+			<div class="controls">
+			<textarea name="inputIsi" class="span12" type="text" id="inputIsi" placeholder="Tulis berita disini"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputDate">Gambar</label>
+			<div class="controls">
+			<input name="inputGambar" class="span3" type="file" id="inputGambar">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+			<button type="submit" class="btn btn-primary"></i>Save</button>
+			<button type="button" class="btn"><a href="profil.php">Back</a></button>
+			</div>
+		</div>
+	</form>
+	</form>
+</body>
+<script src="js/bootstrap.js"></script>
+</html>
