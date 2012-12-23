@@ -7,11 +7,6 @@ Tutorial URL: http://tutorialzine.com/2009/08/creating-a-facebook-like-registrat
 You are free to use the following demo code for any purpose you see fit.
 
 -->
-<?php
-	define('INCLUDE_CHECK',1);
-	require "functions.php";
-?>
-
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
@@ -31,8 +26,8 @@ You are free to use the following demo code for any purpose you see fit.
     <h1>Sign Up for I-Fishing Member <small>Register ur account to be new member</small></h1>
 </div></div>
 
-<div id="div-regForm">
-<form id="regForm" action="sumbit.php" method="post">
+<div id="div">
+<form id="regForm" action="submit.php" method="post">
 
 <div><table>
   <tbody>
@@ -57,7 +52,7 @@ You are free to use the following demo code for any purpose you see fit.
     <td>
     <div class="input-container">
     <select name="sex" id="sex">
-    <option value="0">Pilih JK:</option>
+    <option value="0">Pilih:</option>
     <option value="1">Laki-laki</option>
     <option value="2">Perempuan</option>
     </select>
@@ -68,11 +63,12 @@ You are free to use the following demo code for any purpose you see fit.
   <tr>
     <td><label>Tanggal Lahir:</label></td>
     <td>
-    <div class="input-container">
-    <select name="month"><option value="0">Bulan:</option><?=generate_options(1,12,'callback_month')?></select>
-    <select name="day"><option value="0">Tanggal:</option><?=generate_options(1,31)?></select>
-	<select name="year"><option value="0">Tahun:</option><?=generate_options(date('Y'),1900)?></select>
-    </div>
+    <div class="control-group">
+			<label class="control-label" for="inputDate"></label>
+			<div class="controls">
+			<input name="inputTanggal" class="span3" type="date" id="inputTanggal">
+			</div>
+		</div>
     </td>
 	
   <tr>
