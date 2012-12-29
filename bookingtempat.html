@@ -1,0 +1,178 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Booking tempat</title>
+</head>
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+<link rel="stylesheet" href="css/futurico-theme.css" media="screen">
+
+<meta name="robots" content="noindex,follow" />
+
+<body>
+<div class="hero row">
+		<div class="hero-container">
+			<div class="span6">
+				<h1>Start Sharing about Fishing</h1>
+				<p>Localhost lets you upload all sorts of files and share them with the world, or with just that one person who needs it.</p>
+			</div>
+		</div>
+	</div>
+
+<div id="content">
+	<div class="wrapper">
+
+		<div id="main">
+			<div class="mode">
+				
+				Ganti Tampilan : <a id="list-view">list</a> / <a id="tile-view">grid</a>
+				
+				 <div class="bs-docs-example">
+					<ul class="nav nav-pills">
+						<li><a href="homepage.html">Home</a>
+						</li>
+						<li><a href="profile.html">Profile</a></li>
+						<li class="active"><a href="event.html">Event</a></li>
+						<li class="Dropdown">
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Dropdown 
+						<b class="caret"></b></a>
+						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+						<li><a tabindex="-1" href="#">Action</a></li>
+						<li><a tabindex="-1" href="#">Another action</a></li>
+						<li><a tabindex="-1" href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" href="#">Separated link</a></li>
+						</ul>
+              </li>
+						<li><a href="wp.php">Wisata Pancing</a></li>
+					</ul>
+
+				</div>
+				
+			</div>
+			<hr class="bs-docs-separator">
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span11">
+<form class="form-horizontal" name="formtambah" action="simpanbooktempat.html" method="post" enctype="multipart/form-data">
+<legend><strong>Booking tempat pemancingan</strong></legend>
+		<div class="control-group">
+			<label class="control-label" for="inputPilihTempat">TEMPAT PEMANCINGAN</label>
+			<div class="controls">
+			<select name="inputPilihTempat" class="span3" type="text" id="inputPilihTempat">
+				<option>Babatan Pantai Pemancingan</option>
+				<option>Pondok Maritim Kolam Pancing</option>
+				<option>DELTA FISHING</option>
+				<option>Kharisma Juanda</option>
+				<option>Kolam Pancing Mojopahit</option>
+				<option>Rahayu Pemancingan</option>
+			</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTanggal">Tanggal untuk memancing</label>
+			<div class="controls">
+			<input name="inputTanggal" class="span3" type="date" id="inputTanggal">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputWaktu">Waktu untuk memancing</label>
+			<div class="controls">
+			<input name="inputWaktu" class="span3" type="time" id="inputWaktu">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputNama">Nama Pemesan (ketua)</label>
+			<div class="controls">
+			<input name="inputNama" class="span3" type="text" id="inputNama">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputJumlahOrang">Jumlah orang *</label>
+			<div class="controls">
+			<input name="inputJumlahOrang" class="span3" type="text" id="inputJumlahOrang">
+			</div>
+		</div>
+		<br>*isi dengan angka 1,2,3,4,5,dst</br>
+		<div class ="control-group">
+			<label class="control-label"  for="inputAlamat">Alamat pemesan</label>
+			<div class="controls">
+			<textarea name="inputAlamat" class="span9" type="text" id="inputAlamat" placeholder="Tulis alamat jelas" ></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputHP">No HP yang bisa dihubungi</label>
+			<div class="controls">
+			<input name="inputHP" class="span3" type="text" id="inputHP">
+			</div>
+		</div>
+		<div class="control-group">
+		<label class="checkbox">
+		<input type="checkbox" value="">
+		Data yang telah saya isikan adalah benar adanya
+		</label>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+			<button type="submit" class="btn btn-primary"></i>Save</button>
+			<button type="button" class="btn"><a href="profil.php">Back</a></button>
+			</div>
+		</div>
+	</form>
+	</div>
+		</div>
+<aside>
+	<ul>
+	<ul>
+	<br>
+	<br><br>
+	<div class="row-fluid">
+		 <div class="span2 offset4">
+			</div>
+		</div>
+		<br>
+		<p><img src="logo.png" width="250" height="150"
+		  <BR>
+		  <address>
+		    <strong>Komunitas Pemancingan</strong><br>
+					  Sukolilo <br>
+					  Surabaya, 60111<br>
+					  <abbr title="Phone">P:</abbr> (031) 5994251
+		  </address>
+					 
+					<address>
+					<strong>apa</strong><br>
+					  <a href="mailto:#">i-fishing@gmail.com</a>
+					</address>
+		</br>			
+	</ul>
+	</ul>
+	</div>				
+
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+</div>
+	</aside>
+</body>
+<script src="js/bootstrap.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script>
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+			effect: 'random',
+			directionNavHide: false,
+			pauseOnHover: true,
+			captionOpacity: 1,
+			prevText: '<',
+			nextText: '>'
+		});
+	});
+</script>
+</html>
