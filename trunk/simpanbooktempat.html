@@ -1,0 +1,29 @@
+<html>
+<head>
+<body>
+<?php
+include "config.php";
+$inputpilihtempat=$_POST['inputPilihTempat'];
+$inputtanggal=$_POST['inputTanggal'];
+$inputwaktu=$_POST['inputWaktu'];
+$inputnama=$_POST['inputNama'];
+$inputjumlahorang=$_POST['inputJumlahOrang'];
+$inputalamat=$_POST['inputAlamat'];
+$inputhp=$_POST['inputHP'];
+ 
+ $insertdata = "INSERT INTO booking_tempat (ID_BOOKING_TEMPAT, TEMPAT_PEMANCINGAN, TANGGAL_BOOK_TEMPAT, WAKTU_BOOK_TEMPAT, NAMA_PEMESAN, JUMLAH_ORANG, ALAMAT_PESAN, NO_HP_BOOK_TEMPAT)
+ VALUES('', '$inputpilihtempat','$inputtanggal', '$inputwaktu', '$inputnama', '$inputjumlahorang', ,'$inputalamat', '$inputhp')";
+ $hasil=mysql_query($insertdata);
+ $getdata = "SELECT ID_BOOKING_TEMPAT, TEMPAT_PEMANCINGAN, TANGGAL_BOOK_TEMPAT, WAKTU_BOOK_TEMPAT, NAMA_PEMESAN, NAMA_PEMESAN, JUMLAH_ORANG, ALAMAT_PESAN, NO_HP_BOOK_TEMPAT
+ from booking_tempat where ID_BOOKING_TEMPAT = '' limit 1 ";
+ $hasildata = mysql_query($getdata);
+ while ($data = mysql_fetch_array($hasildata))
+		{
+			echo 'Ini data anda:<tr>';
+			echo $data;
+		}
+?>
+ </body>
+ 
+<script src="js/bootstrap.js"></script>
+</html>
