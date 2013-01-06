@@ -85,7 +85,7 @@
                   <div class="caption">
                     <h3><?php echo $data[1];?></h3>
                     <p><?php echo $data[0];?></p>
-                    <p><a href="editberita.html" class="btn btn-primary" name="hapus" id="hapus">Edit</a> <a href="hapusberita.php" class="btn">Hapus</a></p>
+                    <p><a href="edittipsntrick.html" class="btn btn-primary" name="hapus" id="hapus">Edit</a> <a href="hapustipsntrick.php" class="btn">Hapus</a></p>
                   </div>
                 </div>
               </li>
