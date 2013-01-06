@@ -40,15 +40,14 @@ html {
 }
 
 a:focus {
-  outline: thin dotted #ffffff;
+  outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
- }
+}
 
 a:hover,
 a:active {
   outline: 0;
-  color:#ffffff;
 }
 
 sub,
@@ -397,7 +396,7 @@ a:hover {
 }
 
 .row-fluid .span4 {
-  width: 50%;
+  width: 31.914893617021278%;
   *width: 31.861702127659576%;
 }
 
@@ -901,7 +900,7 @@ pre code {
 }
 
 form {
-  margin: 0 0 0px;
+  margin: 0 0 20px;
 }
 
 fieldset {
@@ -920,7 +919,6 @@ legend {
   color: #333333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
-  font-family:"Forte",Gill sans MT,Verdana,Arial,sans-serif;
 }
 
 legend small {
@@ -968,7 +966,7 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 20px;
+  /* height: 20px; */
   padding: 4px 6px;
   margin-bottom: 9px;
   font-size: 14px;
