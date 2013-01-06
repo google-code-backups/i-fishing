@@ -10,6 +10,7 @@ include "config.php";
 $inputjudul=$_POST['inputJudul'];
 $inputtanggal=$_POST['inputTanggal'];
 $inputwaktu=$_POST['inputWaktu'];
+$inputtempat=$_POST['inputTempat'];
 $inputisi=$_POST['inputIsi'];
 $fileName = $_FILES['inputGambar']['name']; //get the file name
 $fileSize = $_FILES['inputGambar']['size']; //get the size
@@ -20,8 +21,8 @@ if($fileSize > 0 || $fileError == 0)
 	if($move)
 	{
 		echo "<h3>Success! </h3>";
-		$insertdata = "INSERT INTO PERLOMBAAN (ID_PERLOMBAAN, JUDUL_PERLOMBAAN, TANGGAL_LOMBA, WAKTU_LOMBA, ISI_PERLOMBAAN, GAMBAR_LOMBA, FILENAME)
-		VALUES('','$inputjudul', '$inputtanggal', '$inputwaktu', '$inputisi', 'lomba/image/$fileName', '$fileName')";
+		$insertdata = "INSERT INTO PERLOMBAAN (ID_PERLOMBAAN, JUDUL_PERLOMBAAN, TANGGAL_LOMBA, WAKTU_LOMBA, TEMPAT_LOMBA, ISI_PERLOMBAAN, GAMBAR_LOMBA, FILENAME)
+		VALUES('','$inputjudul', '$inputtanggal', '$inputwaktu', '$inputtempat','$inputisi', 'lomba/image/$fileName', '$fileName')";
 		$hasil=mysql_query($insertdata);
 		$getfoto = "SELECT GAMBAR_LOMBA from PERLOMBAAN where FILENAME = '$fileName' limit 1 "; //get the image that have been uploaded
 		$hasilfoto = mysql_query($getfoto);
