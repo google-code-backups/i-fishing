@@ -74,18 +74,18 @@
   
     // Langkah 2 Sesuaikan perintah SQL 
 	$batas=$batas+1;
-    $tampil = "SELECT JUDUL_BERITA, ISI_BERITA, FOTO_BERITA FROM berita LIMIT $posisi, $batas";  
+    $tampil = "SELECT Nama_Depan, Jenis_Kelamin, Nama_Belakang,email FROM AKUN_PENGGUNA LIMIT $posisi, $batas";  
     $hasil = mysql_query($tampil);
 	while ($data = mysql_fetch_row (($hasil))){
 	$no = $posisi +1 ;
 	?>
-              <li class="span3">
+              <li class="span4">
                 <div class="thumbnail">
-                  <img src="<?php echo $data[2];?>" width="500" height="400">
                   <div class="caption">
-                    <h3><?php echo $data[1];?></h3>
-                    <p><?php echo $data[0];?></p>
-                    <p><a href="editberita.html" class="btn btn-primary" name="hapus" id="hapus">Edit</a> <a href="hapusberita.php" class="btn">Hapus</a></p>
+                    <h3><?php echo $data[0]."-".$data[2];?></h3>
+                    <p><?php echo "Jenis Kelamin :".$data[1];?></p>
+					<p><?php echo "E-mail        :".$data[3];?></p>
+                    <p><a  class="btn-primary" name="hapus" id="hapus"></a> <a href="hapusberita.php" class="btn">Hapus</a></p>
                   </div>
                 </div>
               </li>
@@ -96,12 +96,13 @@
     $no++; 	
     
 	}
-	 
-	 // Langkah 3 hitung total data dan halaman  
-    $tampil2 = mysql_query("SELECT JUDUL_PERLOMBAAN, TANGGAL_LOMBA, WAKTU_LOMBA, TEMPAT_LOMBA, GAMBAR_LOMBA FROM perlombaan ");
+	
+    // Langkah 3 hitung total data dan halaman  
+    $tampil2 = mysql_query("SELECT Nama_Depan, Jenis_Kelamin, Nama_Belakang,email FROM AKUN_PENGGUNA");  
     $jmlData = mysql_num_rows($tampil2);  
     $jmlHal = ceil($jmlData/$batas);  
-	//Link ke halaman sebelumnya (Prev)  
+  
+    //Link ke halaman sebelumnya (Prev)  
     if ($halaman > 1){  
         $prev = $halaman - 1;  
         echo "<a href=$_SERVER[PHP_SELF]?halaman=$prev << Prev </a>";  
