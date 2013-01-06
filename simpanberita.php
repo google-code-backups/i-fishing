@@ -21,7 +21,7 @@ if($fileSize > 0 || $fileError == 0)
 	{
 		echo "<h3>Success! </h3>";
 		$insertdata = "INSERT INTO BERITA (ID_BERITA, JUDUL_BERITA, TANGGAL_BERITA, WAKTU_BERITA, ISI_BERITA, FOTO_BERITA, FILENAME)
-		VALUES('','$inputjudul', '$inputtanggal', '$inputwaktu', '$inputisi', 'image/$fileName', '$fileName')";
+		VALUES('','$inputjudul', '$inputtanggal', '$inputwaktu', '$inputisi', 'berita/image/$fileName', '$fileName')";
 		$hasil=mysql_query($insertdata);
 		$getfoto = "SELECT FOTO_BERITA from BERITA where FILENAME = '$fileName' limit 1 "; //get the image that have been uploaded
 		$hasilfoto = mysql_query($getfoto);
