@@ -1,99 +1,138 @@
 <html>
 <head>
+
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Booking tempat</title>
-</head>
+<title>Booking lomba</title>
+
 <link rel="stylesheet" type="text/css" href="demo.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
 <link rel="stylesheet" href="css/nivo-slider.css" media="screen">
 <link rel="stylesheet" href="css/futurico-theme.css" media="screen">
-
+</head>
 <meta name="robots" content="noindex,follow" />
 
 <body>
 <div class="hero row">
 		<div class="hero-container">
+		<div class="action pull-right"><img src="img/logo.png" width="350" height="250"></img>
+			</div>
 			<div class="span6">
-				<h1>Start Sharing about Fishing</h1>
-				<p>Localhost lets you upload all sorts of files and share them with the world, or with just that one person who needs it.</p>
+				<h2>Website Pemancingan Terintegrasi</h2>
+				<h6>"Trust us to be your fishing partner"</h6>
 			</div>
 		</div>
 	</div>
+
 
 <div id="content">
 	<div class="wrapper">
 
 		<div id="main">
 			<div class="mode">
-				
-				Ganti Tampilan : <a id="list-view">list</a> / <a id="tile-view">grid</a>
-				
 				 <div class="bs-docs-example">
 					<ul class="nav nav-pills">
-						<li><a href="homepage.html">Home</a>
+						<li class="active">
+							<a href="homepage.html">Home</a>
 						</li>
 						<li><a href="profile.html">Profile</a></li>
-						<li class="active"><a href="event.html">Event</a></li>
 						<li class="Dropdown">
-						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Dropdown 
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
 						<b class="caret"></b></a>
 						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-						<li><a tabindex="-1" href="#">Action</a></li>
-						<li><a tabindex="-1" href="#">Another action</a></li>
-						<li><a tabindex="-1" href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a tabindex="-1" href="#">Separated link</a></li>
+						<li><a tabindex="-1" href="#">Perlombaan</a></li>
+						<li><a tabindex="-1" href="#">Berita</a></li>
+						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
 						</ul>
               </li>
 						<li><a href="wp.php">Wisata Pancing</a></li>
+						<li><a href="w.html">About I-Fishing</a></li>
 					</ul>
 
 				</div>
 				
 			</div>
 			<hr class="bs-docs-separator">
-<div class="container-fluid">
+<!--<div class="container-fluid">
 <div class="row-fluid">
-    <div class="span11">
-<form class="form-horizontal" name="formtambah" action="simpanberita.php" method="post" enctype="multipart/form-data">
-<legend><strong>Booking tempat pemancingan</strong></legend>
+    <div class="span12">-->
+<form class="form-horizontal" name="formtambah" action="simpanbooklomba.php" method="post" enctype="multipart/form-data">
+<legend><strong>BOOKING LOMBA</strong></legend>
 		<div class="control-group">
-			<label class="control-label" for="inputNamaDepan">Nama Depan</label>
+		<label class="control-label" for="inputPilihLomba">Jenis Lomba</label>
+		<div class="controls">
+			<select name="inputPilihLomba" class="span3" type="text" id="inputPilihLomba" required="true">
+				<option>Babatan Pantai Pemancingan</option>
+				<option>Pondok Maritim Kolam Pancing</option>
+				<option>DELTA FISHING</option>
+				<option>Kharisma Juanda</option>
+				<option>Kolam Pancing Mojopahit</option>
+				<option>Rahayu Pemancingan</option>
+			</select>
+			</div>
+			</div>
+		<div class="control-group">
+			<label class="control-label" for="inputNamaKetua">Nama Ketua</label>
 			<div class="controls">
-			<input name="inputNamaDepan" class="span3" type="text" id="inputNamaDepan">
+			<input name="inputNamaKetua" class="span3" type="text" id="inputNamaKetua" required="true">
+			</div>
+		</div>				
+		<div class ="control-group">
+			<label class="control-label"  for="inputAlamatKetua">Alamat Ketua</label>
+			<div class="controls">
+			<textarea name="inputAlamatKetua" class="span9" type="text" id="inputAlamatKetua" placeholder="Tulis alamat jelas" required="true"></textarea>
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="inputNamaDepan">Nama Depan</label>
+			<label class="control-label" for="inputHPKetua">Ho HP ketua</label>
 			<div class="controls">
-			<input name="inputNamaDepan" class="span3" type="text" id="inputNamaDepan">
+			<input name="inputHPKetua" class="span3" type="text" id="inputHPKetua" required="true">
 			</div>
 		</div>
+		<p>optional untuk pengisian data anggota </p>
 		<div class="control-group">
-			<label class="control-label" for="inputTanggal">Tanggal</label>
+			<label class="control-label" for="inputNamaAnggota1">Nama Anggota 1</label>
 			<div class="controls">
-			<input name="inputTanggal" class="span3" type="date" id="inputTanggal">
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="inputWaktu">Waktu</label>
-			<div class="controls">
-			<input name="inputWaktu" class="span3" type="time" id="inputWaktu">
+			<input name="inputNamaAnggota1" class="span3" type="text" id="inputNamaAnggota1">
 			</div>
 		</div>
 		<div class ="control-group">
-			<label class="control-label"  for="inputIsi">Isi Berita</label>
+			<label class="control-label"  for="inputAlamatAnggota1">Alamat Anggota 1</label>
 			<div class="controls">
-			<textarea name="inputIsi" class="span9" type="text" id="inputIsi" placeholder="Tulis berita disini" ROWS=10 COLS=5 ></textarea>
+			<textarea name="inputAlamatAnggota1" class="span9" type="text" id="inputAlamatAnggota1" placeholder="Tulis alamat jelas"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputHPAnggota1">Ho HP Anggota 1</label>
+			<div class="controls">
+			<input name="inputHPAnggota1" class="span3" type="text" id="inputHPAnggota1">
+			</div>
+		</div>
+				<div class="control-group">
+			<label class="control-label" for="inputNamaAnggota2">Nama Anggota 2</label>
+			<div class="controls">
+			<input name="inputNamaAnggota2" class="span3" type="text" id="inputNamaAnggota2">
+			</div>
+		</div>
+				
+		<div class ="control-group">
+			<label class="control-label"  for="inputAlamatAnggota2">Alamat Anggota 2</label>
+			<div class="controls">
+			<textarea name="inputAlamatAnggota2" class="span9" type="text" id="inputAlamatAnggota2" placeholder="Tulis alamat jelas"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputHPAnggota2">Ho HP Anggota 2</label>
+			<div class="controls">
+			<input name="inputHPAnggota2" class="span3" type="text" id="inputHPAnggota2">
 			</div>
 		</div>
 		<div class ="control-group">
-			<label class="control-label" for="inputDate">Gambar</label>
+			<label class="control-label" for="inputDate">KTP ketua</label>
 			<div class="input-container">
-			<input name="inputGambar" class="span3" type="file" id="inputGambar">
+			<input name="inputGambar" class="span3" type="file" id="inputGambar" required="true">
 			</div>
 		</div>
 		<div class="control-group">
@@ -113,7 +152,7 @@
 	<div class="row-fluid">
 		 <div class="span2 offset4">
 			</div>
-		</div>
+		
 		<br>
 		<p><img src="logo.png" width="250" height="150"
 		  <BR>
@@ -128,19 +167,17 @@
 					<strong>apa</strong><br>
 					  <a href="mailto:#">i-fishing@gmail.com</a>
 					</address>
-		</br>			
+		</br>
+			
 	</ul>
 	</ul>
 	</div>				
-
-		<div class="clearfix"></div>
-	</div>
 
 </div>
 </div>
 	</aside>
 </body>
-<script src="js/bootstrap.js">
+<script src="js/bootstrap.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/jquery.nivo.slider.pack.js"></script>
 <script>
@@ -155,4 +192,7 @@
 		});
 	});
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
 </html>
