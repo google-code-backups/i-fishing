@@ -1,0 +1,108 @@
+/*
+
+Tutoralzine Demo 
+Original tutorial: Creating a Facebook-like Registration Form with jQuery
+Tutorial URL: http://tutorialzine.com/2009/08/creating-a-facebook-like-registration-form-with-jquery/
+
+You are free to use the following demo code for any purpose you see fit.
+
+*/
+
+
+/* Form styles */
+
+input,select{
+	padding:0px;
+	font-family:Bodoni Bk BT, Helvetica, sans-serif;
+	border:1px solid #cccccc;
+	margin-top:10px;
+	width:220px;
+	font-size:16px;
+	color:#000000;
+}
+
+select{
+	width:auto;
+	padding:2px;
+}
+
+body{
+	background:#00BFFF;
+}
+
+label{
+	font-size:16px;
+	font-family:Bodoni Bk BT, Helvetica, sans-serif;
+	text-align:right;
+	color:#000000;
+}
+
+table{
+	width:400px;
+	color:#000000;
+}
+
+td{
+	font-size:12px;
+	color:#000000;
+}
+
+.input-container{
+	padding:1px;
+}
+
+.page-header{
+	padding:3px;
+	color:#333333;
+	font-family:Forte;
+	margin-top:0px;
+	font-size:16px;
+}
+
+.wrap{
+	padding:3px;
+	color:#333333;
+	font-family:Forte;
+	margin-top:0px;
+	font-size:16px;
+}
+
+#div-regForm,.registered{	
+	border:3px solid #eeeeee;
+	padding:0px;
+	background:#F8F8FF;
+	color:#203360;
+	width:400px;
+}
+
+.greenButton{
+	width:auto;
+	margin:10px 0 0 2px;
+	padding:3px 4px 3px 4px;
+	color:white;
+	background-color:#0000FF;
+	outline:none;
+	border:1px solid #006600;
+	font-weight:bold;
+}
+
+.greenButton:active{
+	background-color:#006600;
+	padding:4px 3px 2px 5px;
+}
+
+#loading{
+	left:10px;
+	position:relative;
+	top:3px;
+	visibility:hidden;
+}
+
+#error{
+	background-color:#ffebe8;
+	border:1px solid #dd3c10;
+	padding:7px 3px;
+	text-align:center;
+	margin-top:10px;
+	visibility:hidden;
+}
