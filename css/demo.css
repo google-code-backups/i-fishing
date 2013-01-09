@@ -1,0 +1,214 @@
+/*
+
+Tutoralzine Demo 
+Original tutorial: Creating a Facebook-like Registration Form with jQuery
+Tutorial URL: http://tutorialzine.com/2009/08/creating-a-facebook-like-registration-form-with-jquery/
+
+You are free to use the following demo code for any purpose you see fit.
+
+*/
+
+
+/* Page styles */
+
+body,h1,h2,h3,p,td,quote,small,form,input,ul,li,ol,label{
+	margin:0px;
+	padding:0px;
+}
+
+h2{
+	font-family:Forte;
+	color:#FFFFF0;
+}
+
+h6{
+	font-family:Lucida Handwriting;
+	color:#F0FFF0;
+}
+
+body{
+	margin-top:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#51555C;
+	height:100%;
+	
+	font-size:11px;
+}
+
+
+/* Form styles */
+
+input,select{
+	padding:1px;
+	color:#333333;
+	
+	border:1px solid #96A6C5;
+	margin-top:2px;
+	width:200px;
+	font-size:10px;
+}
+
+select{
+	width:auto;
+	padding:20px;
+}
+
+.formline{
+	padding:3px;
+}
+
+label{
+	font-size:16px;
+	display:block;
+	text-align:left;
+	color:#000000;
+}
+
+table{
+	width:2000px;
+	color:#000000;
+}
+
+
+/* Ukuran huruf sign up */
+td{	
+	font-size:16px;
+	font-family:"Bodoni Bk BT";
+	color:rgb(255, 255, 255);
+}
+td1{
+	color:#000000;
+}
+.container-fluid{
+padding-top:40px;
+padding-bottom:40px;
+}
+
+.wrapper{
+width:960px;
+margin:30px 50px auto 60px;
+}
+
+#main{
+width:800px;
+float:left;
+}
+
+aside{
+width:190px;
+float:left;
+}
+
+#content{
+margin-left:10px;
+margin-right:10px;
+}
+
+#myCarousel{
+width:1150px;
+margin-left	:40px;
+margin-right:40px;
+margin-top: 0px;
+}
+
+.hero{
+color:rgb(255, 255, 255);
+background-color:rgb(0, 136, 204);
+background-image:-moz-radial-gradient(center center , ellipse closest-side, rgb(18, 152, 219) 0%, rgb(0, 102, 187) 100%);
+border-top:1px solid rgb(11, 83, 140);
+border-bottom:1px solid rgb(11, 83, 140);
+margin-left	:40px;
+margin-top: 0px;
+}
+
+.hero .action{
+margin-top:50px;
+font-size:18px;
+line-height:24px;
+padding-right:100px;
+}
+
+.row{
+margin-left	:40px;
+margin-right:40px;
+}
+
+.input-container{
+	padding:1px;
+}
+
+
+#div-regForm,.registered{	
+	border:3px solid #eeeeee;
+	padding:10px;
+	
+	background: #0000ff;
+	background-color:#1E90FF;
+	background-image:-moz-linear-gradient(top bottom , ellipse closest-side, rgb(18, 152, 219) 10%, rgb(0, 102, 187) 10%);
+	color:rgb(255, 255, 255);
+	
+	width:320px;
+	height:auto;
+	
+}
+
+#regForm{
+margin:0pt 2px auto auto;
+padding:0px;
+}
+
+.form-title,
+.form-sub-title{
+	font-size:30px;
+	
+	font-family:"Forte",Gill sans MT,Verdana,Arial,sans-serif;
+	font-weight:bold;
+}
+
+.form-sub-title{
+	font-size:15px;
+	font-weight:normal;
+	padding:10px 0 1px 0;
+}
+
+.greenButton{
+	width:auto;
+	margin:10px 0 0 2px;
+	padding:3px 4px 3px 4px;
+	color:white;
+	background-color:#0000FF;
+	outline:none;
+	border:1px solid #006600;
+	font-weight:bold;
+}
+
+.greenButton:active{
+	background-color:#006600;
+	padding:4px 3px 2px 5px;
+}
+
+#loading{
+	left:10px;
+	position:relative;
+	top:3px;
+	visibility:hidden;
+}
+
+#error{
+	background-color:#ffebe8;
+	border:1px solid #dd3c10;
+	padding:7px 3px;
+	text-align:center;
+	margin-top:10px;
+	visibility:hidden;
+}
+
+.article.post{
+	background: none repeat scroll 0% 0% white;
+	box-shadow: 0pt 1px 1px rgba(0,0,0,0,1);
+	margin-bottom: 20px;
+	padding:20px;
+	border-radius:3px 3px 3px 3px;
+	font-size:30px;
+	font-family:"Forte",Gill sans MT,Verdana,Arial,sans-serif;
+}
