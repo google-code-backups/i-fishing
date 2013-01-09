@@ -1,82 +1,80 @@
-<html>
+<!DOCTYPE html>
 <?php
-	define('INCLUDE_CHECK',1);
-	require "functions.php";
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: home.php');
+	exit;
+}
 ?>
-
-
+<html>
 <head>
+
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PROFIL</title>
-
-
+<title>Berita</title>
+</head>
 <link rel="stylesheet" type="text/css" href="demo.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
-<body>
-<div class="style3">
-	  <div align="center" class="style2">
-		<pre class="style3 style1 style1">
-	
-		SELAMAT DATANG
-		-- Komunitas Pemancingan --</pre>
-			  <BR><BR>
-	  </div>
-	</div>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2">
-    <p><img src="logo.png" width="250" height="150"
-		  <BR>
-		  <address>
-		    <strong>Komunitas Pemancingan</strong><br>
-					  Sukolilo <br>
-					  Surabaya, 60111<br>
-					  <abbr title="Phone">P:</abbr> (031) 5994251
-		  </address>
-					 
-					<address>
-					<strong>apa</strong><br>
-					  <a href="mailto:#">apaaja@gmail.com</a>
-					</address>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+<link rel="stylesheet" href="css/futurico-theme.css" media="screen">
 
-			<div>
-					
-		<form method="post" action="logout.php"><legend>LOG OUT</legend>
-
-			<button class="btn btn-danger" type="submit">Log Out</button>
-		</form>
+<div class="hero row">
+		<div class="hero-container">
+		<div class="action pull-right"><img src="img/logo.png" width="350" height="250"></img>
 			</div>
-    </div>
-<!--
+			<div class="span6">
+				<h2>Website Pemancingan Terintegrasi</h2>
+				<h6>"Trust us to be your fishing partner"</h6>
+			</div>
+		</div>
+	</div>
 
-span2
-
--->
-  <div class="span10">
- <div>
-    <ul class="nav nav-pills">
-    <li><a href="index.php">Home</a></li>
-    <li class="active"><a href="profil.html">Profile</a></li>
-    <li><a href="#">Event</a></li>
-	<li><a href="#">Wisata Pancing</a></li>
-    </ul>
-</div>
-</head>
 <body>
-<form class="form-horizontal" name="formtambah" action="simpanprofil.php" method="post" enctype="multipart/form-data">
+<div id="content">
+	<div class="wrapper">
+
+		<div id="main">
+			<div class="mode">
+				 <div class="bs-docs-example">
+					<ul class="nav nav-pills">
+						<li class="active">
+							<a href="homepage.html">Home</a>
+						</li>
+						<li><a href="profil.php">Profile</a></li>
+						<li class="Dropdown">
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
+						<b class="caret"></b></a>
+						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+						<li><a tabindex="-1" href="lomba.php">Perlombaan</a></li>
+						<li><a tabindex="-1" href="berita.html">Berita</a></li>
+						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
+						</ul>
+              </li>
+						<li><a href="wisata.php">Wisata Pancing</a></li>
+						<li><a href="w.html">About I-Fishing</a></li>
+						<li><a href="logout.php">Log out</a></li>
+					</ul>
+
+				</div>
+				
+			</div>
+			<hr class="bs-docs-separator">
+
+<body>
+<form class="form-horizontal" name="formtambah" action="simpanprofil2.php" method="post" enctype="multipart/form-data">
 <legend><strong>EDIT PROFIL</strong></legend>
 		<div class="control-group">
 			<label class="control-label" for="inputNamaDepan">Nama Depan</label>
 			<div class="controls">
-			<input name="inputNamaDepan" class="span4" type="text" id="inputNamaDepan">
+			<input name="inputNamaDepan" class="span4" type="text" id="inputNamaDepan" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inpuNamaBelakang">Nama Belakang</label>
 			<div class="controls">
-			<input name="inputNamaBelakang" class="span4" type="text" id="inputNamaBelakang">
+			<input name="inputNamaBelakang" class="span4" type="text" id="inputNamaBelakang" required="true">
 			</div>
 		</div>
 		<div class="control-group">
@@ -91,49 +89,49 @@ span2
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Tanggal Lahir</label>
 			<div class="controls">
-			<input name="inputTanggalLahir" class="span4" type="date" id="inputTanggalLahir">
+			<input name="inputTanggalLahir" class="span4" type="date" id="inputTanggalLahir" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Email</label>
 			<div class="controls">
-			<input name="inputEmail" class="span4" type="text" id="inputEmail">
+			<input name="inputEmail" class="span4" type="text" id="inputEmail" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Password</label>
 			<div class="controls">
-			<input name="inputPassword" class="span3" type="text" id="inputPassword">
+			<input name="inputPassword" class="span3" type="password" id="inputPassword" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Foto</label>
 			<div class="controls">
-			<input name="inputGambar" class="span4" type="file" id="inputGambar">
+			<input name="inputGambar" class="span4" type="file" id="inputGambar" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Pertanyaan 1</label>
 			<div class="controls">
-			<input name="inputPertanyaan1" class="span4" type="text" id="inputPertanyaan1">
+			<input name="inputPertanyaan1" class="span4" type="text" id="inputPertanyaan1" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Jawaban 1</label>
 			<div class="controls">
-			<input name="inputJawaban1" class="span4" type="text" id="inputJawaban1">
+			<input name="inputJawaban1" class="span4" type="text" id="inputJawaban1" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Pertanyaan 2</label>
 			<div class="controls">
-			<input name="inputPertanyaan2" class="span4" type="text" id="inputPertanyaan2">
+			<input name="inputPertanyaan2" class="span4" type="text" id="inputPertanyaan2" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputDate">Jawaban 2</label>
 			<div class="controls">
-			<input name="inputJawaban2" class="span4" type="text" id="inputJawaban2">
+			<input name="inputJawaban2" class="span4" type="text" id="inputJawaban2" required="true">
 			</div>
 		</div>
 		<div class="control-group">

@@ -42,7 +42,7 @@
 						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
 						<b class="caret"></b></a>
 						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-						<li><a tabindex="-1" href="lomba.html">Perlombaan</a></li>
+						<li><a tabindex="-1" href="lomba.php">Perlombaan</a></li>
 						<li><a tabindex="-1" href="#">Berita</a></li>
 						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
 						</ul>
@@ -63,25 +63,31 @@
 		<div class="control-group">
 			<label class="control-label" for="inputJudul">Judul lomba</label>
 			<div class="controls">
-			<input name="inputJudul" class="span3" type="text" id="inputJudul">
+			<input name="inputJudul" class="span3" type="text" id="inputJudul" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputTanggal">Tanggal lomba</label>
 			<div class="controls">
-			<input name="inputTanggal" class="span3" type="date" id="inputTanggal">
+			<input name="inputTanggal" class="span3" type="date" id="inputTanggal" required="true">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputWaktu">Waktu lomba</label>
 			<div class="controls">
-			<input name="inputWaktu" class="span3" type="time" id="inputWaktu">
+			<input name="inputWaktu" class="span3" type="time" id="inputWaktu" required="true">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTempat">Tempat lomba</label>
+			<div class="controls">
+			<input name="inputTempat" class="span3" type="text" id="inputTempat" required="true">
 			</div>
 		</div>
 		<div class ="control-group">
 			<label class="control-label"  for="inputIsi">Deskrpsi perlombaan</label>
 			<div class="controls">
-			<textarea name="inputIsi" class="span9" type="text" id="inputIsi" placeholder="Tulis deskripsi perlombaan disini" ROWS=10 COLS=5 ></textarea>
+			<textarea name="inputIsi" class="span9" type="text" id="inputIsi" placeholder="Tulis deskripsi perlombaan disini" ROWS=10 COLS=5 required="true"></textarea>
 			</div>
 		</div>
 		<div class ="control-group">
@@ -93,7 +99,7 @@
 		<div class="control-group">
 			<div class="controls">
 			<button type="submit" class="btn btn-primary"></i>Save</button>
-			<button type="button" class="btn"><a href="profil.php">Back</a></button>
+			<button type="button" class="btn"><a href="lomba.php">Back</a></button>
 			</div>
 		</div>
 	</form>
@@ -131,6 +137,7 @@
 </div>
 </div>
 	</aside>
+</div>
 </body>
 <script src="js/bootstrap.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: home.php');
+	exit;
+}
+?>
 <html>
 <head>
 
@@ -50,6 +57,7 @@
               </li>
 						<li><a href="wp.php">Wisata Pancing</a></li>
 						<li><a href="w.html">About I-Fishing</a></li>
+						<li><a href="logout.php">Log out</a></li>
 					</ul>
 
 				</div>

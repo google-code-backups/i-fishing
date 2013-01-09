@@ -1,14 +1,7 @@
 <?php
-
-// Inialize session
 session_start();
-
-// Delete certain session
-unset($_SESSION['ID']);
-// Delete all session variables
-// session_destroy();
-
-// Jump to Home page
-header('Location: home.php');
-
+unset($_SESSION['email']);
+unset($_SESSION['password']);
+session_destroy();
+header('location:home.php');
 ?>

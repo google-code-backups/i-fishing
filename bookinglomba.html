@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: home.php');
+	exit;
+}
+?>
 <html>
 <head>
 
@@ -42,7 +49,7 @@
 						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
 						<b class="caret"></b></a>
 						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-						<li><a tabindex="-1" href="#">Perlombaan</a></li>
+						<li><a tabindex="-1" href="lomba.php">Perlombaan</a></li>
 						<li><a tabindex="-1" href="#">Berita</a></li>
 						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
 						</ul>
@@ -58,21 +65,35 @@
 <!--<div class="container-fluid">
 <div class="row-fluid">
     <div class="span12">-->
+	<?php
+			include "config.php";
+			?>
 <form class="form-horizontal" name="formtambah" action="simpanbooklomba.php" method="post" enctype="multipart/form-data">
+<?php //get the value from form update
+			$nama = $_GET['JUDUL_PERLOMBAAN']; //get the no which will deleted
+			//query for update data in database
+			$tampil = mysql_query("SELECT * FROM perlombaan where JUDUL_PERLOMBAAN ='$nama'")or die(mysql_error());
+			$perlombaan = mysql_fetch_array($tampil); ?>
 <legend><strong>BOOKING LOMBA</strong></legend>
-		<div class="control-group">
+		<!--<div class="control-group">
 		<label class="control-label" for="inputPilihLomba">Jenis Lomba</label>
 		<div class="controls">
 			<select name="inputPilihLomba" class="span3" type="text" id="inputPilihLomba" required="true">
-				<option>Babatan Pantai Pemancingan</option>
-				<option>Pondok Maritim Kolam Pancing</option>
-				<option>DELTA FISHING</option>
-				<option>Kharisma Juanda</option>
-				<option>Kolam Pancing Mojopahit</option>
-				<option>Rahayu Pemancingan</option>
+				<option value="Babatan Pantai Pemancingan">Babatan Pantai Pemancingan</option>
+				<option value="Pondok Maritim Kolam Pancing">Pondok Maritim Kolam Pancing</option>
+				<option value="DELTA FISHING">DELTA FISHING</option>
+				<option value="Kharisma Juanda">Kharisma Juanda</option>
+				<option value="Kolam Pancing Mojopahit">Kolam Pancing Mojopahit</option>
+				<option value="Rahayu Pemancingan">Rahayu Pemancingan</option>
 			</select>
 			</div>
+			</div> -->
+			<div class="control-group">
+			<label class="control-label" for="inputPilihLomba">Jenis Lomba</label>
+			<div class="controls">
+			<input name="inputJudul" type="text" required="required" value="<?php echo $perlombaan['JUDUL_PERLOMBAAN'];?>" disabled />
 			</div>
+		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputNamaKetua">Nama Ketua</label>
 			<div class="controls">
@@ -176,6 +197,8 @@
 </div>
 </div>
 	</aside>
+	
+</div>
 </body>
 <script src="js/bootstrap.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
