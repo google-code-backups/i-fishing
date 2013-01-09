@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: home.php');
+	exit;
+}
+?>
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
@@ -16,53 +23,52 @@
 <body>
 <div class="hero row">
 		<div class="hero-container">
+		<div class="action pull-right"><img src="img/logo.png" width="350" height="250"></img>
+			</div>
 			<div class="span6">
-				<h1>Start Sharing about Fishing</h1>
-				<p>Localhost lets you upload all sorts of files and share them with the world, or with just that one person who needs it.</p>
+				<h2>Website Pemancingan Terintegrasi</h2>
+				<h6>"Trust us to be your fishing partner"</h6>
 			</div>
 		</div>
 	</div>
+
 
 <div id="content">
 	<div class="wrapper">
 
 		<div id="main">
 			<div class="mode">
-				
-				Ganti Tampilan : <a id="list-view">list</a> / <a id="tile-view">grid</a>
-				
 				 <div class="bs-docs-example">
 					<ul class="nav nav-pills">
-						<li><a href="homepage.html">Home</a>
+						<li class="active">
+							<a href="homepage.html">Home</a>
 						</li>
 						<li><a href="profile.html">Profile</a></li>
-						<li class="active"><a href="event.html">Event</a></li>
 						<li class="Dropdown">
-						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Dropdown 
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
 						<b class="caret"></b></a>
 						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-						<li><a tabindex="-1" href="#">Action</a></li>
-						<li><a tabindex="-1" href="#">Another action</a></li>
-						<li><a tabindex="-1" href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a tabindex="-1" href="#">Separated link</a></li>
+						<li><a tabindex="-1" href="#">Perlombaan</a></li>
+						<li><a tabindex="-1" href="#">Berita</a></li>
+						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
 						</ul>
               </li>
 						<li><a href="wp.php">Wisata Pancing</a></li>
+						<li><a href="w.html">About I-Fishing</a></li>
 					</ul>
 
 				</div>
 				
 			</div>
 			<hr class="bs-docs-separator">
-			<div class="container-fluid">
+<!--<div class="container-fluid">
 <div class="row-fluid">
-    <div class="span11">
+    <div class="span12">-->
 <legend><strong>EDIT BERITA</strong></legend>
 
 <?php
 
-$query=" SELECT JUDUL_BERITA, TANGGAL_BERITA, WAKTU_BERITA, ISI_BERITA, FOTO_BERITA FROM berita where id_berita ='12' ";
+$query=" SELECT JUDUL_BERITA, TANGGAL_BERITA, WAKTU_BERITA, ISI_BERITA, FOTO_BERITA FROM berita ";
 $result=mysql_query($query);
 $num=mysql_numrows($result);
 mysql_close();

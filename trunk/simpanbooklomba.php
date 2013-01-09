@@ -7,8 +7,9 @@
 <body>
 <?php
 include "config.php";
-$inputnamaketua=$_POST['inputNamaKetua'];
+
 $inputpilihlomba=$_POST['inputPilihLomba'];
+$inputnamaketua=$_POST['inputNamaKetua'];
 $inputalamatketua=$_POST['inputAlamatKetua'];
 $inputhpketua=$_POST['inputHPKetua'];
 $inputnamaanggota1=$_POST['inputNamaAnggota1'];
@@ -18,7 +19,7 @@ $inputnamaanggota2=$_POST['inputNamaAnggota2'];
 $inputalamatanggota2=$_POST['inputAlamatAnggota2'];
 $inputhpanggota2=$_POST['inputHPAnggota2'];
 date_default_timezone_set ('Asia/Jakarta');
-$inputtanggal= date_default_timezone_get();
+$inputtanggal= date_default_timezone_get('y-m-d');
 $fileName = $_FILES['inputGambar']['name']; //get the file name
 $fileSize = $_FILES['inputGambar']['size']; //get the size
 $fileError = $_FILES['inputGambar']['error']; //get the error when upload
@@ -28,9 +29,9 @@ if($fileSize > 0 || $fileError == 0)
 	if($move)
 	{
 		echo "<h3>Success! </h3>";
-		$insertdata = "INSERT INTO BOOKING_LOMBA (ID_DAFTAR_LOMBA, NAMA_KETUA, JENIS_LOMBA, ALAMAT_BOOK_LOMBA, NO_HP_BOOK_LOMBA, NAMA_ANGGOTA1, ALAMAT_ANGGOTA1, HP_ANGGOTA1, NAMA_ANGGOTA2, ALAMAT_ANGGOTA2, HP_ANGGOTA2, ISI_PERLOMBAAN, KTP_KETUA, FILENAME, TANGGAL_BOOK_LOMBA)
-		VALUES('','$inputnamaketua', '$inputpilihlomba', '$inputalamatketua', '$$inputhpketua','$inputnamaanggota1', '$inputalamatanggota1', '$inputhpanggota1', '$inputnamaanggota2', '$inputalamatanggota2', '$inputhpanggota2','lomba/image/$fileName', '$fileName', '$inputtanggal')";
-		$hasil=mysql_query($insertdata);
+		$insertdata = "INSERT INTO BOOKING_LOMBA (ID_DAFTAR_LOMBA, JENIS_LOMBA, NAMA_KETUA, ALAMAT_BOOK_LOMBA, NO_HP_BOOK_LOMBA, NAMA_ANGGOTA1, ALAMAT_ANGGOTA1, HP_ANGGOTA1, NAMA_ANGGOTA2, ALAMAT_ANGGOTA2, HP_ANGGOTA2, KTP_KETUA, filename, TANGGAL_BOOK_LOMBA)
+		VALUES('', '$inputpilihlomba','$inputnamaketua', '$inputalamatketua', '$$inputhpketua','$inputnamaanggota1', '$inputalamatanggota1', '$inputhpanggota1', '$inputnamaanggota2', '$inputalamatanggota2', '$inputhpanggota2','lomba/image/$fileName', '$fileName', '$inputtanggal')";
+		$hasil=mysql_query($insertdata) or die (mysql_error());
 		$getfoto = "SELECT KTP_KETUA from BOOKING_LOMBA where FILENAME = '$fileName' limit 1 "; //get the image that have been uploaded
 		$hasilfoto = mysql_query($getfoto);
 		while ($data = mysql_fetch_array($hasilfoto))
@@ -52,7 +53,7 @@ if($fileSize > 0 || $fileError == 0)
 	}
 ?>
 <p><center><a>Berita has been saved</a></center></p>
-<button type="button" class="btn"><a href="tambahlomba.html">Back</a></button>
+<button type="button" class="btn"><a href="bookinglomba.html">Back</a></button>
 </body>
 <script src="js/bootstrap.js"></script>
 </html>
