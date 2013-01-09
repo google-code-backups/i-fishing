@@ -1,0 +1,101 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: home.php');
+	exit;
+}
+?>
+<html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edit Berita</title>
+</head>
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+<link rel="stylesheet" href="css/futurico-theme.css" media="screen">
+
+<meta name="robots" content="noindex,follow" />
+
+
+<div class="hero row">
+		<div class="hero-container">
+		<div class="action pull-right"><img src="img/logo.png" width="350" height="250"></img>
+			</div>
+			<div class="span6">
+				<h2>Website Pemancingan Terintegrasi</h2>
+				<h6>"Trust us to be your fishing partner"</h6>
+			</div>
+		</div>
+	</div>
+
+<body>
+<div id="content">
+	<div class="wrapper">
+
+		<div id="main">
+			<div class="mode">
+				 <div class="bs-docs-example">
+					<ul class="nav nav-pills">
+						<li class="active">
+							<a href="homepage.html">Home</a>
+						</li>
+						<li><a href="profile.html">Profile</a></li>
+						<li class="Dropdown">
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
+						<b class="caret"></b></a>
+						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+						<li><a tabindex="-1" href="#">Perlombaan</a></li>
+						<li><a tabindex="-1" href="#">Berita</a></li>
+						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
+						</ul>
+              </li>
+						<li><a href="wp.php">Wisata Pancing</a></li>
+						<li><a href="w.html">About I-Fishing</a></li>
+						<li><a href="logout.php">Log out</a></li>
+					</ul>
+
+				</div>
+				
+			</div>
+			<hr class="bs-docs-separator">
+			<table class="table table-bordered">
+			<tr>
+				<th>No</th>
+				<th>ID_BERITA</th>
+				<th>JUDUL_BERITA</th>
+				<th>TANGGAL_BERITA</th>
+				<th>WAKTU_BERITA</th>
+				<th>ISI_BERITA</th>
+			</tr>
+		<tbody>
+			<?php
+			include'pageberita.php';
+			?>
+		</tbody>
+			
+	</table>
+			</body>
+<script src="js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script>
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+			effect: 'random',
+			directionNavHide: false,
+			pauseOnHover: true,
+			captionOpacity: 1,
+			prevText: '<',
+			nextText: '>'
+		});
+	});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+</html>

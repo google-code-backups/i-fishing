@@ -1,0 +1,161 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: home.php');
+	exit;
+}
+?>
+<html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TambahBerita</title>
+
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+<link rel="stylesheet" href="css/futurico-theme.css" media="screen">
+</head>
+<meta name="robots" content="noindex,follow" />
+
+<body>
+<div class="hero row">
+		<div class="hero-container">
+		<div class="action pull-right"><img src="img/logo.png" width="350" height="250"></img>
+			</div>
+			<div class="span6">
+				<h2>Website Pemancingan Terintegrasi</h2>
+				<h6>"Trust us to be your fishing partner"</h6>
+			</div>
+		</div>
+	</div>
+
+
+<div id="content">
+	<div class="wrapper">
+
+		<div id="main">
+			<div class="mode">
+				 <div class="bs-docs-example">
+					<ul class="nav nav-pills">
+						<li class="active">
+							<a href="homepage.html">Home</a>
+						</li>
+						<li><a href="profile.html">Profile</a></li>
+						<li class="Dropdown">
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
+						<b class="caret"></b></a>
+						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+						<li><a tabindex="-1" href="#">Perlombaan</a></li>
+						<li><a tabindex="-1" href="#">Berita</a></li>
+						<li><a tabindex="-1" href="#">Tips and Trik</a></li>
+						</ul>
+              </li>
+						<li><a href="wp.php">Wisata Pancing</a></li>
+						<li><a href="w.html">About I-Fishing</a></li>
+						<li><a href="logout.php">Log out</a></li>
+					</ul>
+
+				</div>
+				
+			</div>
+			<hr class="bs-docs-separator">
+<!--<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span12">-->
+<form class="form-horizontal" name="formtambah" action="simpanberita.php" method="post" enctype="multipart/form-data">
+<legend><strong>TAMBAH BERITA</strong></legend>
+		<div class="control-group">
+			<label class="control-label" for="inputJudul">Judul</label>
+			<div class="controls">
+			<input name="inputJudul" class="span3" type="text" id="inputJudul">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTanggal">Tanggal</label>
+			<div class="controls">
+			<input name="inputTanggal" class="span3" type="date" id="inputTanggal">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputWaktu">Waktu</label>
+			<div class="controls">
+			<input name="inputWaktu" class="span3" type="time" id="inputWaktu">
+			</div>
+		</div>
+		<div class ="control-group">
+			<label class="control-label"  for="inputIsi">Isi Berita</label>
+			<div class="controls">
+			<textarea name="inputIsi" class="span9" type="text" id="inputIsi" placeholder="Tulis berita disini" ROWS=10 COLS=5 ></textarea>
+			</div>
+		</div>
+		<div class ="control-group">
+			<label class="control-label" for="inputDate">Gambar</label>
+			<div class="input-container">
+			<input name="inputGambar" class="span3" type="file" id="inputGambar">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+			<button type="submit" class="btn btn-primary"></i>Save</button>
+			<button type="button" class="btn"><a href="profil.php">Back</a></button>
+			</div>
+		</div>
+	</form>
+	</div>
+		</div>
+<aside>
+	<ul>
+	<ul>
+	<br>
+	<br><br>
+	<div class="row-fluid">
+		 <div class="span2 offset4">
+			</div>
+		
+		<br>
+		<p><img src="logo.png" width="250" height="150"
+		  <BR>
+		  <address>
+		    <strong>Komunitas Pemancingan</strong><br>
+					  Sukolilo <br>
+					  Surabaya, 60111<br>
+					  <abbr title="Phone">P:</abbr> (031) 5994251
+		  </address>
+					 
+					<address>
+					<strong>apa</strong><br>
+					  <a href="mailto:#">i-fishing@gmail.com</a>
+					</address>
+		</br>
+			
+	</ul>
+	</ul>
+	</div>				
+
+</div>
+</div>
+	</aside>
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script>
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+			effect: 'random',
+			directionNavHide: false,
+			pauseOnHover: true,
+			captionOpacity: 1,
+			prevText: '<',
+			nextText: '>'
+		});
+	});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+</html>
