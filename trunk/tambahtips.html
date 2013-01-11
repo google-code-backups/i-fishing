@@ -1,0 +1,146 @@
+<html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tambah Tips dan trik</title>
+
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+<link rel="stylesheet" href="css/futurico-theme.css" media="screen">
+</head>
+<meta name="robots" content="noindex,follow" />
+
+<body>
+<div class="hero row">
+		<div class="hero-container">
+		<div class="action pull-right"><img src="img/logo.png" width="350" height="250"></img>
+			</div>
+			<div class="span6">
+				<h2>Website Pemancingan Terintegrasi</h2>
+				<h6>"Trust us to be your fishing partner"</h6>
+			</div>
+		</div>
+	</div>
+
+
+<div id="content">
+	<div class="wrapper">
+
+		<div id="main">
+			<div class="mode">
+				 <div class="bs-docs-example">
+					<ul class="nav nav-pills">
+						<li><a href="homepage.html">Home</a></li>
+						<li><a href="profile.html">Profile</a></li>
+						<li class="Dropdown">
+						<a class="Dropdown" id="drop1" role="button" data-toggle="dropdown" href="#">Event 
+						<b class="caret"></b></a>
+						<ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+						<li><a tabindex="-1" href="lomba.php">Perlombaan</a></li>
+						<li><a tabindex="-1" href="#">Berita</a></li>
+						<li class="active"><a tabindex="-1" href="tipsdantrik.html">Tips and Trik</a></li>
+						</ul>
+              </li>
+						<li><a href="wisata.php">Wisata Pancing</a></li>
+						<li><a href="w.html">About I-Fishing</a></li>
+					</ul>
+
+				</div>
+				
+			</div>
+			<hr class="bs-docs-separator">
+<!--<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span12">-->
+<form class="form-horizontal" name="formtambah" action="TIPS_TRIK.php" method="post" enctype="multipart/form-data">
+<legend><strong>TAMBAH TIPS DAN TRIK</strong></legend>
+		<div class="control-group">
+			<label class="control-label" for="inputJudul">Judul tips</label>
+			<div class="controls">
+			<input name="inputJudul" class="span3" type="text" id="inputJudul" required="true">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTanggal">Tanggal tips</label>
+			<div class="controls">
+			<input name="inputTanggal" class="span3" type="date" id="inputTanggal" required="true">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputWaktu">Waktu tips</label>
+			<div class="controls">
+			<input name="inputWaktu" class="span3" type="time" id="inputWaktu" required="true">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTempat">Tempat tips</label>
+			<div class="controls">
+			<input name="inputTempat" class="span3" type="text" id="inputTempat" required="true">
+			</div>
+		</div>
+		<div class ="control-group">
+			<label class="control-label"  for="inputIsi">Deskrpsi tips</label>
+			<div class="controls">
+			<textarea name="inputIsi" class="span9" type="text" id="inputIsi" placeholder="Tulis deskripsi perlombaan disini" ROWS=10 COLS=5 required="true"></textarea>
+			</div>
+		</div>
+		<div class ="control-group">
+			<label class="control-label" for="inputDate">Gambar </label>
+			<div class="input-container">
+			<input name="inputGambar" class="span3" type="file" id="inputGambar">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+			<button type="submit" class="btn btn-primary"></i>Save</button>
+			<button type="button" class="btn"><a href="tipsdantrik.html">Back</a></button>
+			</div>
+		</div>
+	</form>
+	</div>
+		</div>
+<aside>
+	<ul>
+	<ul>
+	<br>
+	<br><br>
+	<div class="row-fluid">
+		 <div class="span2 offset4">
+			</div>
+		
+		<br>
+		<p><img src="logo.png" width="250" height="150"
+		  <BR>
+		  <address>
+		    <strong>Komunitas Pemancingan</strong><br>
+					  Sukolilo <br>
+					  Surabaya, 60111<br>
+					  <abbr title="Phone">P:</abbr> (031) 5994251
+		  </address>
+					 
+					<address>
+					<strong>apa</strong><br>
+					  <a href="mailto:#">i-fishing@gmail.com</a>
+					</address>
+		</br>
+			
+	</ul>
+	</ul>
+	</div>				
+
+</div>
+</div>
+	</aside>
+</div>
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+</html>
